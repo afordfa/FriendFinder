@@ -9,23 +9,6 @@ var path = require("path");
 var app = express();
 var PORT = 3000;
 
-var friends = [
-{
-  name: "Kermit the Frog",
-  photo: "http://vignette1.wikia.nocookie.net/characters/images/9/98/Kermit-two1.jpg/revision/latest?cb=20130504163204",
-  scores:[
-      5,
-      1,
-      4,
-      4,
-      5,
-      1,
-      2,
-      5,
-      4,
-      1
-    ]
-}];
 
 
 
@@ -37,6 +20,14 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
 
 
+
+// ================================================================================
+// ROUTER
+// The below points our server to a series of "route" files.
+// These routes give our server a "map" of how to respond when users visit or request data from various URLs.
+// ================================================================================
+require("./app/routing/apiRoutes")(app);
+require("./app/routing/htmlRoutes")(app);
 
 
 // Starts the server to begin listening
