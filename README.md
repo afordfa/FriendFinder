@@ -1,5 +1,5 @@
 # FriendFinder
-Deployed at https://vast-ocean-72599.herokuapp.com/
+Deployed at https://muppet-finder.herokuapp.com/
 
 
 Features:
